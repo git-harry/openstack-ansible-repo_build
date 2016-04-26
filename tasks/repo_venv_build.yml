@@ -62,6 +62,7 @@
 
 - name: Run venv process script
   shell: "bash /opt/op-venv-script.sh"
+  environment: "{{ repo_build_pip_env }}"
   tags:
     - repo-create-venv
     - repo-venv-compress-archive

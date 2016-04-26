@@ -30,5 +30,7 @@ galaxy_info:
     - openstack
 dependencies:
   - apt_package_pinning
-  - { role: 'galera_client', galera_client_drop_config_file: false }
+  - role: 'galera_client'
+    galera_client_drop_config_file: false
+    galera_client_pip_packages: []
   - pip_install
