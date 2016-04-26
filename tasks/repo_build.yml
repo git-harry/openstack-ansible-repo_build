@@ -15,7 +15,9 @@
 
 - name: Create OpenStack-Ansible requirement wheels
   shell: >
-    pip wheel --timeout {{ repo_build_timeout }}
+    pip wheel
+    --isolated
+    --timeout {{ repo_build_timeout }}
     --wheel-dir {{ repo_build_output }}
     --find-links {{ repo_build_global_links_path }}
     --find-links {{ repo_build_output }}
